@@ -76,6 +76,7 @@ angular.module('FredrikSandell.worker-pool', []).service('WorkerService', [
           deferred.reject(e);
         }
       });
+      deferred.promise.workerReference = worker;
       return deferred.promise;
     };
     function createIncludeStatements(listOfServiceNames) {

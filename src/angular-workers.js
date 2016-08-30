@@ -99,6 +99,8 @@ angular.module('FredrikSandell.worker-pool', [])
             }
         });
 
+        deferred.promise.workerReference = worker;
+
         return deferred.promise;
     };
 
